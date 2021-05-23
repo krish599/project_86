@@ -10,7 +10,7 @@ block_image_object = "";
 
 function player_update(){
 
-    fabric.Image.fromURL(" player(1).png" , function(Img){
+    fabric.Image.fromURL(" player.png" , function(Img){
         player_object = Img;
      
         player_object.scaleToWidth(150);
@@ -95,7 +95,7 @@ function player_update(){
           new_image('hulk_body.png');
        }
 
-       if(keypressed == '73'  && keypressed == '66'){
+       if(keypressed == '73'  &&  keypressed == '66'){
         new_image('ironman_body.png');
      }
 
@@ -127,15 +127,57 @@ if(keypressed == '67'  && keypressed == '83'){
   new_image('thor_face.png');
 }
 
-if(keypressed == '67'  && keypressed == '83'){
+ if(keypressed == '67'  && keypressed == '83'){
   new_image('thor_left_hand.png');
-}
+ }
 
 if(keypressed == '67'  && keypressed == '83'){
   new_image('thor_right_hand.png');
 }
+}
 
+function up (){
 
+  if(player_y  >= 0 ){
+    player_y = player_y - block_image_height;
+    canvas.remove(player_object);
+    player_update();
+  }
+}
 
-    }
+function up (){
+
+  if(player_y  >= 0 ){
+    player_y = player_y - block_image_height;
+    canvas.remove(player_object);
+    player_update();
+  }
+}
+
+function down (){
+
+  if(player_y  <= 500 ){
+    player_y = player_y + block_image_height;
+    canvas.remove(player_object);
+    player_update();
+  }
+}
+
+function left (){
+
+  if(player_x  > 0 ){
+    player_x = player_x - block_image_height;
+    canvas.remove(player_object);
+    player_update();
+  }
+}
+
+function right (){
+
+  if(player_y  <= 850 ){
+    player_x = player_x + block_image_height;
+    canvas.remove(player_object);
+    player_update();
+  }
+}
    
