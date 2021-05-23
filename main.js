@@ -41,3 +41,101 @@ function player_update(){
         });
    
     }
+
+    window.addEventListener("keydown" , my_keydown);
+
+    function my_keydown(e){
+          keypressed = e.keyCode;
+
+          if(e.shiftKey == true  &&  keypressed == '80'){
+             block_image_width = block_image_width + 10;
+             block_image_height = block_image_height + 10;
+             document.getElementById("current_width").innerHTML  =  block_image_width;
+             document.getElementById("current_height").innerHTML  =  block_image_height;
+
+          }
+
+          if(e.shiftKey   &&  keypressed == '77'){
+            block_image_width = block_image_width - 10;
+            block_image_height = block_image_height - 10;
+            document.getElementById("current_width").innerHTML  =  block_image_width;
+            document.getElementById("current_height").innerHTML  =  block_image_height;
+
+         }
+
+         if(keypressed == '38'){
+           up();
+           console.log("up");
+         }
+
+         if(keypressed == '40'){
+            down();
+            console.log("down");
+          }
+
+          if(keypressed == '37'){
+            left();
+            console.log("left");
+          }
+
+          if(keypressed == '39'){
+            right();
+            console.log("right");
+          }
+
+          if(keypressed == '72'  && keypressed == '70'){
+             new_image('hulk_face.png');
+          }
+
+          if(keypressed == '72'  && keypressed == '76'){
+            new_image('hulk_legs.png');
+         }
+
+         if(keypressed == '72'  && keypressed == '66'){
+          new_image('hulk_body.png');
+       }
+
+       if(keypressed == '73'  && keypressed == '66'){
+        new_image('ironman_body.png');
+     }
+
+     if(keypressed == '73'  && keypressed == '72'){
+      new_image('ironman_left_hand.png');
+   }
+
+   if(keypressed == '73'  && keypressed == '76'){
+    new_image('ironman_legs.png');
+ }
+
+ if(keypressed == '73'  && keypressed == '82'){
+  new_image('ironman_right_hand.png');
+}
+
+if(keypressed == '83'  && keypressed == '70'){
+  new_image('spiderman_face.png');
+}
+
+if(keypressed == '83'  && keypressed == '72'){
+  new_image('spiderman_left_hand.png');
+}
+
+if(keypressed == '83'  && keypressed == '76'){
+  new_image('spiderman_legs.png');
+}
+
+if(keypressed == '67'  && keypressed == '83'){
+  new_image('thor_face.png');
+}
+
+if(keypressed == '67'  && keypressed == '83'){
+  new_image('thor_left_hand.png');
+}
+
+if(keypressed == '67'  && keypressed == '83'){
+  new_image('thor_right_hand.png');
+}
+
+
+
+    }
+   
